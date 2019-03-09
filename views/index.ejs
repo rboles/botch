@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Botch</title>
+  </head>
+  <body>
+    <h1>TODO</h1>
+    <div>
+      <form action="/api/todo" method="POST">
+        <input type="text" placeholder="Text" name="text">
+        <select name="priority" value="high">
+          <option value="3">High</option>
+          <option value="2">Medium</option>
+          <option value="1">Low</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <ul>
+        <% for(let i=0; i < todos.length; i++) {%>
+           <li>
+             <span><%= todos[i].text %></span>
+             <span>(
+               <% if ( todos[i].priority == 3 ) { %> High <% } %>
+               <% if ( todos[i].priority == 2 ) { %> Medium <% } %>
+               <% if ( todos[i].priority == 1 ) { %> Low <% } %>
+               )</span>
+           </li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
