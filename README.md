@@ -46,7 +46,9 @@ Mongo has a bunch of sugar for creating entities when you first try to use them.
 
 # Steps
 
-Steps to get the project started:
+Note: if starting with this source, just run `npm install`
+
+Steps I took to get the project started:
 
 ```bash
 mkdir -p ~/Projects/botch
@@ -72,8 +74,6 @@ Edit package.json and add sugar for starting nodemon:
   }
 }
 ```
-
-Note: if starting with this source, just run `npm install`
 
 Running the app with `nodemon`
 
